@@ -2,11 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOTO FINDER</title>
-    <script type="module" crossorigin src="/assets/index-C0Ttd0Ea.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-NcBLqG-l.css">
+    <script type="module" crossorigin src="https://lilclemclem.github.io/LOTO-FINDER/assets/index-DtyQppZZ.js"></script>
+    <link rel="stylesheet" crossorigin href="https://lilclemclem.github.io/LOTO-FINDER/assets/index-R9KOCtAH.css">
   </head>
+<script>
+  const repoName = "LOTO-FINDER"; // Remplace par le nom du repo
+  window.fetch = ((originalFetch) => {
+    return (...args) => {
+      if (typeof args[0] === "string" && args[0].startsWith("/")) {
+        args[0] = `/${repoName}${args[0]}`;
+      }
+      return originalFetch(...args);
+    };
+  })(window.fetch);
+</script>
   <body>
     <div id="root"></div>
   </body>
