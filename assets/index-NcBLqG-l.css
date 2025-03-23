@@ -95,7 +95,7 @@ strong {
   color: #888;
   text-align: center;
 }
-@media all and (width < 500px) {
+@media all and (max-width: 500px) {
   .main-text {
     font-size: 52px;
   }
